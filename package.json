@@ -1,6 +1,6 @@
 {
   "name": "vue_good_components",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "dev": "vite",
@@ -16,7 +16,6 @@
   "files": [
     "dist"
   ],
-
   "author": "You github Name <> ()",
   "license": "MIT",
   "repository": {
