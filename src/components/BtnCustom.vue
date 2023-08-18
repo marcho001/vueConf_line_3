@@ -41,27 +41,27 @@ button {
 		color: #fff;
 	}
 	&.danger:hover {
-		box-shadow: 6px 6px #ff8585;
+		box-shadow: 6px 6px #ff8585 !important;
 		transition: 0.3s;
-		background-color: #c84141;
+		background-color: #c84141 !important;
 	}
 	&.success {
 		background-color: #26c76f;
 		color: #fff;
 	}
 	&.success:hover {
-		box-shadow: 6px 6px #57f39d;
+		box-shadow: 6px 6px #57f39d !important;
 		transition: 0.3s;
-		background-color: #23a55d;
+		background-color: #23a55d !important;
 	}
 	&.info {
 		background-color: #50bfff;
 		color: #fff;
 	}
 	&.info:hover {
-		box-shadow: 6px 6px #a0dcff;
+		box-shadow: 6px 6px #a0dcff !important;
 		transition: 0.3s;
-		background-color: #419fd5;
+		background-color: #419fd5 !important;
 	}
 	&.normal:hover {
 		box-shadow: 6px 6px #bbbbbb;
