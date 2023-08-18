@@ -9,6 +9,10 @@
   <body>
     <div id="app">
       <!-- 將 component 放這邊 -->
+      <upload-input
+        :tab-items="['tab1', 'tab2', 'tab3']"
+        @tab-changed="handleTabClicked"
+      ></upload-input>
     </div>
     <script type="importmap">
       {
@@ -20,13 +24,18 @@
     <script type="module">
       import { createApp, ref } from 'vue'
       import {
-        MEmailInput // 換成要驗證的元件， 記得先 npm run watch
+        UploadInput // 換成要驗證的元件， 記得先 npm run watch
       } from '../dist/MyLibrary.es.js'
       createApp({
         components: {
-          MEmailInput // 換成要驗證的元件
+          UploadInput // 換成要驗證的元件
         },
-        setup() {}
+        setup() {
+          const handleTabClicked = tab => {
+            val.value = tab
+          }
+          return { handleTabClicked }
+        }
       }).mount('#app')
     </script>
   </body>
