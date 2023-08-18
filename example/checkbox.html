@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkbox example</title>
+    <link rel="stylesheet" href="../dist/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <checkbox title="Checkbox 1" :checked="`true`" :color="color" :disabled="disabled"></checkbox>
+      <checkbox title="Checkbox 2" :color="`#2196F3`"></checkbox>
+      <checkbox title="Checkbox 3" :color="`#FF6F00`"></checkbox>
+      <checkbox :title="title" :checked="checked" :color="`grey`" :disabled="disabled"></checkbox>
+      <!-- 將 component 放這邊 -->
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.esm-browser.prod.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import { createApp, ref } from 'vue'
+      import {
+        Checkbox // 換成要驗證的元件， 記得先 npm run watch
+      } from '../dist/MyLibrary.es.js'
+      createApp({
+        components: {
+          Checkbox // 換成要驗證的元件
+        },
+        setup() {
+          const title = ref("Checkbox 4")
+          const checked = ref(false)
+          const color = ref("#000000")
+          const disabled = ref(false)
+
+          return {
+            title,
+            checked,
+            color,
+            disabled
+          }
+        }
+      }).mount('#app')
+    </script>
+  </body>
+</html>
