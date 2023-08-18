@@ -34,3 +34,23 @@
 </script>
 
 ```
+
+# Example copy-button
+
+```
+<div id="app">
+  <copy-button></copy-button>
+</div>
+<script type="module">
+  import { createApp, ref } from 'vue'
+  import {
+    CopyButton, // 換成要驗證的元件， 記得先 npm run watch
+  } from '../dist/MyLibrary.es.js'
+  createApp({
+    components: {
+      CopyButton,
+    },
+    setup() {},
+  }).mount('#app')
+</script>
+```
